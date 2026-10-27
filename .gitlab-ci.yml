@@ -1,0 +1,28 @@
+pages:
+  image: pandoc/core:3.1  # Image Docker avec Pandoc préinstallé
+  stage: deploy
+  script:
+    - mkdir -p public
+    # Compiler tous les .md en HTML avec bibliographie
+    - |
+      for file in docs/*.md; do
+        filename=$(basename "$file" .md)
+        pandoc "$file" \
+          --bibliography=docs/references.bib \
+          --citeproc \
+          --standalone \
+          --metadata title="Documentation" \
+          --css=style.css \
+          -o "public/${filename}.html"
+      done
+    # CSS simple
+    - echo "body{font-family:Arial;max-width:800px;margin:40px auto;padding:20px;line-height:1.6} .csl-entry{margin-bottom:10px}" > public/style.css
+    # Index automatique
+    - echo "<h1>Documentation</h1><ul>" > public/index.html
+    - for file in docs/*.md; do filename=$(basename "$file" .md); echo "<li><a href='${filename}.html'>${filename}</a></li>" >> public/index.html; done
+    - echo "</ul>" >> public/index.html
+  artifacts:
+    paths:
+      - public
+  only:
+    - main

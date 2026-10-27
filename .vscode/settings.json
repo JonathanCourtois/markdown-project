@@ -1,0 +1,49 @@
+{
+  // === MARKDOWN ===
+  "[markdown]": {
+    "editor.wordWrap": "on",
+    "editor.quickSuggestions": {
+      "other": true,
+      "comments": true,
+      "strings": true
+    },
+    "editor.snippetSuggestions": "top",
+    "editor.formatOnSave": true,
+    "editor.renderWhitespace": "none",
+    "editor.minimap.enabled": false
+  },
+
+  // Preview Markdown améliorée
+  "markdown.preview.breaks": true,
+  "markdown.preview.fontSize": 14,
+  "markdown.preview.fontFamily": "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
+  "markdown.preview.scrollEditorWithPreview": true,
+  "markdown.preview.scrollPreviewWithEditor": true,
+
+  // Liens et images
+  "markdown.validate.enabled": true,
+
+  // === BIBLIOGRAPHIE ===
+  "zotero.autoExport": "onFocusChange",
+  "zotero.autoExportPath": "${workspaceFolder}/docs/references.bib",
+  "zotero.database": "group",  // ou "user" selon ton setup
+
+  // === FICHIERS ===
+  "files.exclude": {
+    "**/.git": true,
+    "**/.DS_Store": true,
+    "**/node_modules": true,
+    "**/*.pdf": false  // On veut voir les PDF générés
+  },
+
+  // === SPELL CHECK FRANÇAIS ===
+  "cSpell.language": "fr,en",
+  "cSpell.enabledLanguageIds": ["markdown", "latex", "plaintext", "python", "javascript"],
+  "cSpell.dictionaries": ["french", "software-terms", "python"],
+
+  // === PASTE IMAGE ===
+  "pasteImage.path": "${currentFileDir}/assets",
+  "pasteImage.prefix": "",
+  "pasteImage.defaultName": "[img]-YYMMDDHHmm",
+  "pasteImage.insertPattern": "![description](${imageFilePath})",
+}
