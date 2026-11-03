@@ -55,12 +55,14 @@ La documentation complète est dans le dossier [`docs/`](docs/).
 
 ## 🗂️ Structure du projet
 
+```
 mon-projet/
 ├── docs/ # Documentation Markdown + Biblio
 ├── src/ # Code source
 ├── tests/ # Tests unitaires
 ├── scripts/ # Scripts utilitaires
 └── Makefile # Commandes de build
+```
 
 ## 🤝 Contribution
 
