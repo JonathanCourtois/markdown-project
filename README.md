@@ -16,29 +16,29 @@
 ## 🛠️ Installation
 
 ```bash
-# Cloner le repo {#cloner-le-repo  data-source-line="397"}
+# Cloner le repo {#cloner-le-repo}
 git clone https://gitlab.com/ton-username/ton-projet.git
 cd ton-projet
 
-# Installer les dépendances (si Python) {#installer-les-dépendances-si-python  data-source-line="401"}
+# Installer les dépendances (si Python) {#installer-les-dépendances-si-python}
 pip install -r requirements.txt
 
-# Installer Pandoc pour la doc (Ubuntu/Debian) {#installer-pandoc-pour-la-doc-ubuntudebian  data-source-line="404"}
+# Installer Pandoc pour la doc (Ubuntu/Debian) {#installer-pandoc-pour-la-doc-ubuntudebian}
 sudo apt-get install pandoc texlive-xetex
-``` {data-source-line="406"}
+``` 
 
 ## 💻 Utilisation
 
 ```bash
-# Lancer le code {#lancer-le-code  data-source-line="411"}
+# Lancer le code {#lancer-le-code}
 python src/main.py
 
-# Générer la documentation PDF {#générer-la-documentation-pdf  data-source-line="414"}
+# Générer la documentation PDF {#générer-la-documentation-pdf}
 make pdf
 
-# Mode développement (recompile auto) {#mode-développement-recompile-auto  data-source-line="417"}
+# Mode développement (recompile auto) {#mode-développement-recompile-auto}
 make watch
-``` {data-source-line="419"}
+```
 
 ## 📚 Documentation
 
